@@ -1,0 +1,7 @@
+User-Agent: *
+Disallow: tgupload.php
+Disallow: tgshell.php
+Disallow: tgxff.php
+Disallow: tgser.php
+Disallow: tgphp.php
+Disallow: tginclude.php

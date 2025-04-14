@@ -1,0 +1,115 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;800&display=swap');
+
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+}
+
+.message-box {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transform: rotate(-2deg);
+    position: relative;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+    border: 3px solid #fff;
+}
+
+.message {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #e75480;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    font-weight: 800;
+}
+
+.message::after {
+    content: "♥";
+    display: inline-block;
+    animation: heartbeat 1.5s infinite;
+}
+
+.decoration {
+    position: absolute;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.decoration:nth-child(1) {
+    top: -50px;
+    left: -30px;
+    font-size: 100px;
+    transform: rotate(15deg);
+}
+
+.decoration:nth-child(2) {
+    bottom: -40px;
+    right: -20px;
+    font-size: 80px;
+    transform: rotate(-10deg);
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    14% { transform: scale(1.3); }
+    28% { transform: scale(1); }
+    42% { transform: scale(1.3); }
+    70% { transform: scale(1); }
+}
+
+.blush {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    background: rgba(255, 150, 150, 0.4);
+    border-radius: 50%;
+    filter: blur(10px);
+}
+
+.blush.left {
+    top: 30px;
+    left: 20px;
+}
+
+.blush.right {
+    top: 30px;
+    right: 20px;
+}
+.code-box {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border: 2px solid #fff;
+    transform: rotate(-2deg);
+    font-family: 'Courier New', monospace;
+    color: #e75480;
+    overflow-x: auto;
+    font-size: 0.95rem;
+    position: relative;
+}
+
+.code-box::after {
+    content: "♥";
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 1.2rem;
+    opacity: 0.5;
+}
