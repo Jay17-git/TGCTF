@@ -1,0 +1,24 @@
+version: '3.8'  # 明确指定版本（关键！）
+
+services:
+  web:  # 服务名称必须存在且缩进正确
+    build: ./web  # 确保路径正确
+    restart: unless-stopped
+    ports:
+      - ${PORT:-9045}:9045
+    environment:
+      MYSQL_HOST: db
+      MYSQL_DATABASE: tgctf  # 注意：此处数据库名与 db 服务中的 `MYSQL_DATABASE=tgctf` 一致
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+    depends_on:
+      - db
+
+  db:
+    build: ./db
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=tgctf
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=pass

@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    image: gogogozyll123:latest 
+    ports:
+      - "9046:9046"
+    volumes:
+      - ./notes:/app/notes
+    restart: unless-stopped

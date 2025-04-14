@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      }
+
+      main {
+        max-width: 400px;
+        padding: 2rem;
+        border-radius: 1rem;
+        background-color: white;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .animated-banner {
+        margin-top: 1rem;
+        font-weight: bold;
+        color: #2e7d32;
+        animation: slide 6s linear infinite;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      @keyframes slide {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+      .notice-image {
+        margin-top: 1.5rem;
+        max-width: 100%;
+        border-radius: 0.75rem;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Welcome Back 👋</h1>
+      <p>Hello, <strong>{{username}}</strong></p>
+
+      <div class="animated-banner">征婚启事</div>
+
+      <img
+        class="notice-image"
+        src="https://tc-md.oss-cn-hangzhou.aliyuncs.com/wujie/image-20250411201118390.png"
+        alt="征婚启事"
+      />
+    </main>
+  </body>
+</html>
