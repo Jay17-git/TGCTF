@@ -1,0 +1,1 @@
+flag=b'TGCTF{!!3xP_Is_Sm@ll_But_D@ng3r0}'
