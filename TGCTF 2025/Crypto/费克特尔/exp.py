@@ -14,7 +14,5 @@ n=810544624661213367964996895060815354972889892659483948276203088055391907479553
 e=65537
 phi=prod([x-1 for x in list])
 m=pow(c,inverse(e,phi),n)
-print(m)
-print(m+n)
 print(long_to_bytes(m))
 # b'TGCTF{f4888_6abdc_9c2bd_9036bb}'
