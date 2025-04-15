@@ -49,10 +49,3 @@ print(sol1)
 # print(long_to_bytes(m1-myhash(x1)))
 
 
-# # #m1=m+hash30
-# # #m2=m+hash7
-# # # c1 = pow(m1, e, n)
-# # # c2 = pow(m2, e, n)
-
-
-
